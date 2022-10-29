@@ -1,6 +1,17 @@
-body {
-    font-family: "Roboto", sans-serif;
-    color: var(--text-color-two);
-    background-color: var(--primary-color);
+@import "./base/reset";
+@import "./base/common";
 
-  }
+@import "./utils/variables";
+@import "./utils/hidden";
+
+@import "./components/container";
+@import "./components/modal";
+
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/features";
+@import "./layouts/work";
+@import "./layouts/team";
+@import "./layouts/clients";
+@import "./layouts/footer";
+@import "./layouts/filter";
