@@ -19,16 +19,21 @@
   }
   .footer-item {
     display: block;
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
   }
-  .footer-item:not(:last-child) {
-    margin-bottom: 9px;
-  }
+ 
   .footer-link {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--text-color-one);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+    color: var(--accent-color);
+  }
   }
   .footer-email,
   .footer-tel {
@@ -37,16 +42,10 @@
     letter-spacing: 0.03em;
     color: var(--text-color-four);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .footer-link:hover,
-  .footer-email:hover,
-  .footer-tel:hover {
+    &:hover,
+    &:focus {
     color: var(--accent-color);
   }
-  .footer-link:focus,
-  .footer-email:focus,
-  .footer-tel:focus {
-    color: var(--accent-color);
   }
   .join {
     font-weight: 700;
@@ -80,14 +79,14 @@
     justify-content: center;
     background: rgba(255, 255, 255, 0.1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
   }
   .footer-soc-icon {
     fill: var(--text-color-one);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .footer-soc-link:hover,
-  .footer-soc-link:focus {
-    background-color: var(--accent-color);
   }
   .footer-form-input {
     display: flex;
@@ -100,18 +99,16 @@
     border-radius: 4px;
     margin-right: 12px;
     background-color: transparent;
-  }
-  .footer-input {
-  color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
   padding-left: 16px;
-  }
-  .footer-input::placeholder {
+  &::placeholder {
     font-size: 16px;
     line-height: 1.25;
     display: flex;
     align-items: center;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+  }
   }
   .footer-btn {
     font-weight: 700;

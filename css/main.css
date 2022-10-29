@@ -113,9 +113,7 @@ body {
   cursor: pointer;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.button-close:focus,
-.button-close:hover {
+.button-close:focus, .button-close:hover {
   fill: var(--accent-color);
 }
 
@@ -157,21 +155,16 @@ body {
   padding-left: 42px;
   overflow: nonе;
 }
-
-.form-input:focus,
-.comment:focus {
+.form-input:focus {
   outline: transparent;
   border: 1px solid var(--accent-color);
 }
-
 .form-input::-moz-placeholder {
   padding-left: 42px;
 }
-
 .form-input:-ms-input-placeholder {
   padding-left: 42px;
 }
-
 .form-input::placeholder {
   padding-left: 42px;
 }
@@ -182,7 +175,6 @@ body {
   transform: translateX(52px) translateY(11px);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .form-field input:focus + .form-icon {
   fill: var(--accent-color);
 }
@@ -195,30 +187,31 @@ body {
   resize: none;
   padding: 12px 16px;
 }
-
-.form-field-comment {
-  margin-bottom: 20px;
+.comment:focus {
+  outline: transparent;
+  border: 1px solid var(--accent-color);
 }
-
 .comment::-moz-placeholder {
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .comment:-ms-input-placeholder {
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .comment::placeholder {
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field-comment {
+  margin-bottom: 20px;
 }
 
 .label-agree {
@@ -230,7 +223,6 @@ body {
   display: flex;
   align-items: center;
 }
-
 .label-agree span {
   width: 16px;
   height: 15px;
@@ -242,6 +234,13 @@ body {
   align-items: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.check-agree:checked + .label-agree span {
+  background-color: var(--accent-color);
+  border: transparent;
+}
+.check-agree:focus + .label-agree span {
+  border-color: var(--accent-color);
+}
 
 .agreement {
   font-size: 14px;
@@ -250,15 +249,6 @@ body {
   color: var(--accent-color);
   text-decoration: underline;
   margin-left: 7px;
-}
-
-.check-agree:checked + .label-agree span {
-  background-color: var(--accent-color);
-  border: transparent;
-}
-
-.check-agree:focus + .label-agree span {
-  border-color: var(--accent-color);
 }
 
 .form-btn {
@@ -327,18 +317,14 @@ body {
   padding: 32px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.header-link:hover,
-.header-link:focus {
+.header-link:hover, .header-link:focus {
   color: var(--accent-color);
   cursor: pointer;
 }
-
 .header-link.current {
   color: var(--accent-color);
 }
-
-.current::after {
+.header-link.current::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -368,16 +354,14 @@ body {
   justify-content: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.contacts:hover, .contacts:focus {
+  color: var(--accent-color);
+  cursor: pointer;
+}
 
 .header-contacts-icon {
   fill: currentColor;
   margin-right: 10px;
-}
-
-.contacts:hover,
-.contacts:focus {
-  color: var(--accent-color);
-  cursor: pointer;
 }
 
 .hero {
@@ -423,9 +407,7 @@ body {
   padding: 10px 32px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.hero-btn:hover,
-.hero-btn:focus {
+.hero-btn:hover, .hero-btn:focus {
   background-color: #188ce8;
 }
 
@@ -585,9 +567,7 @@ body {
   color: var(--text-color-five);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.team-soc-link:hover,
-.team-soc-link:focus {
+.team-soc-link:hover, .team-soc-link:focus {
   background-color: var(--accent-color);
   color: var(--text-color-one);
 }
@@ -623,9 +603,7 @@ body {
   fill: var(--text-color-five);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.regular-clients-link:hover,
-.regular-clients-link:focus {
+.regular-clients-link:hover, .regular-clients-link:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -655,7 +633,6 @@ body {
 .footer-item {
   display: block;
 }
-
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -667,6 +644,9 @@ body {
   color: var(--text-color-one);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.footer-link:hover, .footer-link:focus {
+  color: var(--accent-color);
+}
 
 .footer-email,
 .footer-tel {
@@ -676,15 +656,8 @@ body {
   color: var(--text-color-four);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.footer-link:hover,
-.footer-email:hover,
-.footer-tel:hover {
-  color: var(--accent-color);
-}
-
-.footer-link:focus,
-.footer-email:focus,
+.footer-email:hover, .footer-email:focus,
+.footer-tel:hover,
 .footer-tel:focus {
   color: var(--accent-color);
 }
@@ -725,15 +698,13 @@ body {
   background: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.footer-soc-link:hover, .footer-soc-link:focus {
+  background-color: var(--accent-color);
+}
 
 .footer-soc-icon {
   fill: var(--text-color-one);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-  background-color: var(--accent-color);
 }
 
 .footer-form-input {
@@ -748,13 +719,9 @@ body {
   border-radius: 4px;
   margin-right: 12px;
   background-color: transparent;
-}
-
-.footer-input {
   color: rgba(255, 255, 255, 0.6);
   padding-left: 16px;
 }
-
 .footer-input::-moz-placeholder {
   font-size: 16px;
   line-height: 1.25;
@@ -763,7 +730,6 @@ body {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .footer-input:-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
@@ -772,7 +738,6 @@ body {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .footer-input::placeholder {
   font-size: 16px;
   line-height: 1.25;
@@ -829,9 +794,7 @@ body {
   padding: 6px 22px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.filter-btn:hover,
-.filter-btn:focus {
+.filter-btn:hover, .filter-btn:focus {
   color: var(--text-color-one);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -871,9 +834,7 @@ body {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.filter-link:hover,
-.filter-link:focus {
+.filter-link:hover, .filter-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -897,8 +858,6 @@ body {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.filter-link:hover .overlay-text,
-.filter-link:focus .overlay-text {
+.filter-link:hover .overlay-text, .filter-link:focus .overlay-text {
   transform: translateY(0);
 }/*# sourceMappingURL=main.css.map */

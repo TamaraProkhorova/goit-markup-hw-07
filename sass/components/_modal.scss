@@ -38,10 +38,10 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .button-close:focus,
-  .button-close:hover {
-    fill: var(--accent-color)
+    &:focus,
+    &:hover {
+      fill: var(--accent-color)
+    }
   }
   .is-hidden {
     opacity: 0;
@@ -76,23 +76,22 @@
   border-radius: 4px;
   padding-left: 42px;
   overflow: nonе;
-  }
-  .form-input:focus,
-  .comment:focus {
+  &:focus {
     outline: transparent; 
   border: 1px solid var(--accent-color);
   }
-  .form-input::placeholder {
+  &::placeholder {
     padding-left: 42px;
+  }
   }
   .form-icon {
     position: absolute;
     left: 0;
     transform: translateX(52px) translateY(11px);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .form-field input:focus + .form-icon {
-    fill: var(--accent-color);
+    .form-field input:focus + & {
+      fill: var(--accent-color);
+    }
   }
   .comment {
     width: 100%;
@@ -101,15 +100,19 @@
   border-radius: 4px;
   resize: none;
   padding: 12px 16px;
+  &:focus {
+    outline: transparent; 
+  border: 1px solid var(--accent-color);
   }
-  .form-field-comment{
-  margin-bottom: 20px;
-  }
-  .comment::placeholder {
+  &::placeholder {
     font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+  }
+  }
+  .form-field-comment{
+  margin-bottom: 20px;
   }
   .label-agree {
     font-size: 14px;
@@ -119,8 +122,7 @@
     margin-bottom: 30px;
     display: flex;
   align-items: center;
-  }
-  .label-agree span{
+  span{
     width: 16px; 
     height: 15px;
     border: 2px solid var(--text-color-two);
@@ -130,6 +132,14 @@
     display: flex;
   align-items: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .check-agree:checked + &{
+    background-color: var(--accent-color);
+    border: transparent;
+  }
+  .check-agree:focus + &{
+    border-color: var(--accent-color);
+  }
+  } 
   }
   .agreement {
     font-size: 14px;
@@ -138,13 +148,6 @@
     color: var(--accent-color);
     text-decoration: underline;
     margin-left: 7px;
-  }
-  .check-agree:checked + .label-agree span{
-    background-color: var(--accent-color);
-    border: transparent;
-  }
-  .check-agree:focus + .label-agree span{
-    border-color: var(--accent-color);
   }
   .form-btn {
     font-weight: 700;
