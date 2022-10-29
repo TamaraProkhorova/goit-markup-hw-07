@@ -2,7 +2,7 @@
     padding-top: 47px;
     padding-bottom: 94px;
   }
-  .work-title {
+  .work__title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.67;
@@ -11,14 +11,14 @@
     text-align: center;
     margin-bottom: 50px;
   }
-  .work-list {
+  .picture__list {
     display: flex;
     gap: 30px;
   }
-  .work-image {
+  .picture__list-image {
     position: relative;
   }
-  .work-container {
+  .work__container {
     position: absolute;
     bottom: 0;
     display: flex;
@@ -28,7 +28,7 @@
     align-items: center;
     background: rgba(47, 48, 58, 0.8);
   }
-  .work-text {
+  .work__text {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
