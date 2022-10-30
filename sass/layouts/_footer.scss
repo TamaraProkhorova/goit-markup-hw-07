@@ -13,9 +13,11 @@
     display: block;
     margin-bottom: 20px;
   }
+  .address-container {
+    margin-right: 70px;
+  }
   .footer-address {
     font-style: normal;
-    margin-right: 70px;
   }
   .footer-item {
     display: block;
@@ -63,11 +65,13 @@
     display: flex;
     align-items: baseline;
   }
+  .footer-soc-container {
+    margin-right: 93px;
+  }
   .footer-soc-list {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-right: 93px;
   }
   .footer-soc-link {
     width: 44px;
@@ -98,7 +102,7 @@
     border-radius: 4px;
     margin-right: 12px;
     background-color: transparent;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255,);
   padding-left: 16px;
   &::placeholder {
     font-size: 16px;
